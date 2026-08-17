@@ -48,6 +48,10 @@ void print_results(const char *s, uint64_t *t, size_t tlen) {
     for (i = 0; i < tlen; ++i)
         t[i] = t[i + 1] - t[i] - overhead;
 
+    for (i = 0; i < tlen; ++i)
+        printf("RAW,%s,%zu,%llu\n", s, i,
+               (unsigned long long)t[i]);
+
     printf("%s\n", s);
     printf("median: %llu cycles/ticks\n", (unsigned long long)median(t, tlen));
     printf("average: %llu cycles/ticks\n",

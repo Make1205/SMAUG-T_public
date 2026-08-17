@@ -1,4 +1,5 @@
 build/
+benchmark_results/
 smaug-t1-main
 smaug-t3-main
 smaug-t5-main
